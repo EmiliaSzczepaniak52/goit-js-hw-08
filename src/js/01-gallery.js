@@ -1,6 +1,8 @@
 // Add imports above this line
+
 import SimpleLightbox from "simplelightbox";
 import { galleryItems } from './gallery-items';
+import "simplelightbox/dist/simple-lightbox.min.css";
 
 console.log(galleryItems);
 const  gallery= document.querySelector(".gallery");
@@ -17,6 +19,8 @@ alt="${image.description}" />
 gallery.insertAdjacentHTML("afterbegin", images);
 
 new SimpleLightbox(".gallery a", {
-    captionDelay: 250,
-    captionsData: "alt",
+  ovelayOpacity:0.9, 
+  captionsData:'alt', 
+  captionDelay: 250,
+  animationSpeed:400,
   });
