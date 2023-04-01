@@ -7,6 +7,7 @@ form.addEventListener('input', throttle(onInputData, 500));
 form.addEventListener('submit', onFormSubmit);
 
 let dataForm = JSON.parse(localStorage.getItem(KEY))||{};
+
 const {email, message}=form.elements;
 reloadPage();
 
